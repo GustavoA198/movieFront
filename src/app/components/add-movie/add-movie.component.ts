@@ -18,7 +18,7 @@ export class AddMovieComponent {
   director = new FormControl<string>('', Validators.required);
   studio = new FormControl<string>('', Validators.required);
   movieCast = new FormControl<string>('', Validators.required);
-  releaseYear = new FormControl<string>('', Validators.required);
+  releaseYear = new FormControl<Number>(0, Validators.required);
 
   selectedFile: File | null = null;
 

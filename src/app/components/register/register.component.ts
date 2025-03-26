@@ -17,6 +17,7 @@ export class RegisterComponent {
   username = new FormControl<string>('', [Validators.required]);
   email = new FormControl<string>('', [Validators.required, Validators.email]);
   password = new FormControl<string>('', [Validators.required, Validators.minLength(5)]);
+  telephone = new FormControl<number>(0 , [Validators.required, Validators.minLength(5)])
 
   registerForm: FormGroup;
 
@@ -35,6 +36,7 @@ export class RegisterComponent {
       username: this.username,
       email: this.email,
       password: this.password,
+      telephone: this.telephone
     });
   }
 
@@ -45,6 +47,7 @@ export class RegisterComponent {
       email: this.registerForm.get('email')?.value,
       username: this.registerForm.get('username')?.value,
       password: this.registerForm.get('password')?.value,
+      telephone: this.registerForm.get('telephone')?.value
     }
     this.authService.register(registerRequest).subscribe({
       next: (res: any) => {

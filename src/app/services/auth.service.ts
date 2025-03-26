@@ -86,6 +86,7 @@ export type RegisterRequest = {
   email: string,
   username: string,
   password: string,
+  telephone: number
 }
 
 export type AuthResponse = {
