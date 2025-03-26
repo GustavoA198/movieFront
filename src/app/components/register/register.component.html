@@ -1,6 +1,6 @@
-<div class="min-h-screen flex items-center justify-center bg-slate-800">
+<div class="min-h-screen flex items-center justify-center  bg-gray-100">
     <div class="bg-white p-8 rounded-2xl shadow-md w-full max-w-md mt-10">
-      <h2 class="text-2xl font-bold mb-8 text-blue-900 text-center">Register Here</h2>
+      <h2 class="text-2xl font-bold mb-8 text-blue-900 text-center">Register</h2>
       <form [formGroup]="registerForm" (ngSubmit)="register()">
           <div *ngIf="inlineNotification.show" class="text-red-600 mt-4 text-center">
             {{ inlineNotification.text }}
